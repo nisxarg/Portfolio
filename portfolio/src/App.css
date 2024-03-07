@@ -2,17 +2,17 @@
 
 /* Basic styles */
 @font-face {
-  font-family: 'TAN NIMBUS';
-  src: url('./fonts/Anton-Regular.ttf') format('truetype');
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-Regular.ttf') format('truetype'); /* Adjust the path as needed */
 }
 
 @font-face {
-  font-family: 'Franchise';
-  src: url('./fonts/Franchise.ttf') format('truetype');
+  font-family: 'Anton';
+  src: url('./fonts/BigCaslonFB-Bold.ttf') format('truetype');
 }
 
 body {
-  font-family: 'TAN NIMBUS', sans-serif;
+  font-family: 'Montserrat', sans-serif; /* Change font-family to Montserrat */
   background-image: url('./background.jpeg'); /* Adjust the path as needed */
   background-size: cover; /* Adjust background size */
   background-repeat: no-repeat; /* Prevent repeating the background */
@@ -33,14 +33,15 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #EBDEC6; /* background */
+  background-color: #000; /* background */
   color: #fff;
-  border-radius: 25px;
+  border-radius: 70px;
 }
 
 .logo img {
   width: 50px; /* Adjust size as needed */
   height: auto;
+  cursor: pointer; /* Add pointer cursor to logo */
 }
 
 .navigation ul {
@@ -56,47 +57,16 @@ body {
 
 .navigation ul li a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
+  transition: color 0.9s; /* Add transition for smoother effect */
 }
 
-.navigation ul li a.active {
-  font-weight: bold; /* Make active link bold */
+.navigation ul li a.active,
+.navigation ul li a:hover {
+  font-weight: bold;
+  color: #ffffff; /* Change color on hover */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Add glow effect on hover */
 }
-
-.main-content {
-  flex: 1;
-  padding: 20px;
-}
-
-.content-box {
-  display: inline-block;
-  border: 2px solid #333;
-  background-color: rgba(235, 222, 198, 0.3);
-  padding: 20px;
-  margin: 20px;
-  border-radius: 20px;
-}
-
-.content-box h1 {
-  font-family: 'franchise'; /* Apply Franchise font to h1 */
-  font-size: 60px;
-  letter-spacing: 2px; /* Adjust font size as needed */
-}
-
-.content-box p {
-  font-family: 'TAN NIMBUS', sans-serif; /* Apply TAN NIMBUS font to p */
-  font-size: 20px; /* Adjust font size as needed */
-}
-.gif-container {
-  display: flex;
-  justify-content: flex-end; /* Align the GIF to the right */
-  margin-top: 20px; /* Add some space between the box and the GIF */
-}
-
-.gif {
-  max-width: 300px; /* Adjust the maximum width of the GIF as needed */
-}
-
 
 .main-content {
   position: relative;
@@ -107,9 +77,33 @@ body {
 .content-box {
   width: 50%; /* Adjust width of the content box */
   transition: transform 0.3s ease;
+  display: inline-block;
+  border: 2px solid #333;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.content-box h1 {
+  font-family: 'Anton'; /* Apply Franchise font to h1 */
+  font-size: 55px;
+  letter-spacing: 2px; /* Adjust font size as needed */
+}
+
+.content-box p {
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font to p */
+  font-size: 20px; /* Adjust font size as needed */
+}
+
+.gif-container {
+  display: flex;
+  justify-content: flex-end; /* Align the GIF to the right */
+  margin-top: 20px; /* Add some space between the box and the GIF */
 }
 
 .gif {
+  max-width: 300px; /* Adjust the maximum width of the GIF as needed */
   position: relative;
   top: 0;
   right: -140px;
@@ -119,7 +113,6 @@ body {
 }
 
 /* ProjectsPage.css */
-
 .projects-page {
   padding: 20px;
 }
@@ -132,51 +125,42 @@ body {
 
 .project-box {
   border: 2px solid #333;
-  background-color: rgba(235, 222, 198, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 20px;
   border-radius: 20px;
 }
 
 .projects-page h1 {
-  font-family: 'Franchise'; /* Apply Franchise font to h1 */
+  font-family: 'Anton'; /* Apply Franchise font to h1 */
   font-size: 60px; /* Increase font size */
-  text-shadow: 2px 2px 4px rgba(235, 222, 198, 0.3);; /* Add text shadow */
+  text-shadow: 2px 2px 4px rgba(235, 222, 198, 0.3); /* Add text shadow */
 }
 
 /* Apply font to headings on Achievements, Resume, and About pages if necessary */
-.achievements-page h1{font-family: 'Franchise'; /* Apply Franchise font to h1 */
-  font-size: 60px; /* Increase font size */
-  text-shadow: 2px 2px 4px rgba(235, 222, 198, 0.3);; /* Add text shadow */
-}
-
-.resume-page h1{font-family: 'Franchise'; /* Apply Franchise font to h1 */
-  font-size: 60px; /* Increase font size */
-  text-shadow: 2px 2px 4px rgba(235, 222, 198, 0.3);; /* Add text shadow */
-}
-
+.achievements-page h1,
+.resume-page h1,
 .about-page h1 {
-  font-family: 'Franchise'; /* Apply Franchise font to h1 */
-  
+  font-family: 'Anton'; /* Apply Franchise font to h1 */
+  font-size: 60px; /* Increase font size */
+  text-shadow: 2px 2px 4px rgba(235, 222, 198, 0.3); /* Add text shadow */
 }
 
 .project-box {
   border: 2px solid #333;
-  background-color: rgba(235, 222, 198, 0.9); /* Increase opacity to 0.6 */
+  background-color: rgba(255, 255, 255, 0.9); /* Increase opacity to 0.6 */
   padding: 20px;
   border-radius: 20px;
   transition: transform 0.3s ease;
 }
 
-.content-box:hover {
-  transform: scale(1.05); /* Scale up the box on hover */
-}
-
+.content-box:hover,
 .project-box:hover {
   transform: scale(1.05); /* Scale up the box on hover */
 }
 
-.project-title {
-  font-family: 'Franchise';
+.project-title,
+.achievement-title {
+  font-family: 'Anton';
   font-size: 24px; /* Adjust font size as needed */
 }
 
@@ -192,20 +176,10 @@ body {
 
 .achievement-box {
   border: 2px solid #333;
-  background-color: rgba(235, 222, 198, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 20px;
   transition: transform 0.3s ease;
-}
-
-
-.achievement-title {
-  font-family: 'Franchise';
-  font-size: 24px; /* Adjust font size as needed */
-}
-
-.achievement-box:hover {
-  transform: scale(1.05); /* Scale up the box on hover */
 }
 
 .achievement-box:hover {
@@ -217,20 +191,22 @@ body {
 }
 
 .resume-heading {
-  font-family: 'Franchise'; /* Apply Franchise font to the resume heading */
+  font-family: 'Anton'; /* Apply Franchise font to the resume heading */
 }
 
 .resume-images {
   display: fill;
-   /* Ensure images are evenly spaced */
+  /* Ensure images are evenly spaced */
 }
 
 .resume-images img {
   width: 100%; /* Adjust image width as needed */
 }
-/* App.css */
 
-/* App.css */
+/* Apply font to headings on About page if necessary */
+.about-page h1 {
+  font-family: 'Anton'; /* Apply Franchise font to h1 */
+}
 
 .about-gif {
   max-width: 300px; /* Adjust the maximum width of the GIF as needed */
@@ -239,6 +215,7 @@ body {
   margin-right: 10px; /* Move the GIF to the right */
   display: block; /* Ensure the GIF is displayed as a block element */
 }
+
 .project-link {
   text-decoration: none; /* Remove underline */
   color: inherit; /* Inherit color from parent */
@@ -246,13 +223,4 @@ body {
 
 .project-link:hover {
   text-decoration: none; /* Remove underline on hover */
-}
-
-/* Footer.css */
-
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
 }
