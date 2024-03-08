@@ -79,7 +79,7 @@ body {
   transition: transform 0.3s ease;
   display: inline-block;
   border: 2px solid #333;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   margin: 20px;
   border-radius: 20px;
@@ -125,7 +125,7 @@ body {
 
 .project-box {
   border: 2px solid #333;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.9 );
   padding: 20px;
   border-radius: 20px;
 }
@@ -133,7 +133,7 @@ body {
 .projects-page h1 {
   font-family: 'Anton'; /* Apply Franchise font to h1 */
   font-size: 60px; /* Increase font size */
-  text-shadow: 2px 2px 4px rgba(235, 222, 198, 0.3); /* Add text shadow */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3); /* Add text shadow */
 }
 
 /* Apply font to headings on Achievements, Resume, and About pages if necessary */
@@ -142,18 +142,24 @@ body {
 .about-page h1 {
   font-family: 'Anton'; /* Apply Franchise font to h1 */
   font-size: 60px; /* Increase font size */
-  text-shadow: 2px 2px 4px rgba(235, 222, 198, 0.3); /* Add text shadow */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9); /* Add text shadow */
 }
 
 .project-box {
+  width: 350px; /* Set a fixed width for the project box */
+  height: 400px; /* Set a fixed height for the project box */
   border: 2px solid #333;
-  background-color: rgba(255, 255, 255, 0.9); /* Increase opacity to 0.6 */
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 20px;
   transition: transform 0.3s ease;
+  cursor: pointer; /* Add pointer cursor to indicate clickability */
+  display: flex;
+  flex-direction: column; /* Align content vertically */
 }
 
-.content-box:hover,
+
+
 .project-box:hover {
   transform: scale(1.05); /* Scale up the box on hover */
 }
@@ -216,11 +222,21 @@ body {
   display: block; /* Ensure the GIF is displayed as a block element */
 }
 
-.project-link {
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit color from parent */
-}
 
 .project-link:hover {
   text-decoration: none; /* Remove underline on hover */
+}
+
+.project-link {
+  display: block; /* Make the anchor tag behave like a block-level element */
+  width: 100%; /* Ensure the anchor tag fills the entire width of its parent container */
+  height: 100%; /* Ensure the anchor tag fills the entire height of its parent container */
+  text-decoration: none; /* Remove underline from the anchor tag */
+  color: inherit; /* Inherit color from parent */
+}
+/* App.css */
+
+/* Apply hover effect to the content box */
+.content-box:hover {
+  transform: scale(1.05); /* Scale up the box on hover */
 }
