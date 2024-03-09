@@ -240,3 +240,72 @@ body {
 .content-box:hover {
   transform: scale(1.05); /* Scale up the box on hover */
 }
+
+
+
+
+/* Hide navigation buttons on screens smaller than 600px */
+/* Adjust styles for smaller screens */
+@media only screen and (max-width: 600px) {
+ 
+
+  .header {
+    padding: 10px;
+  }
+
+  .navigation ul {
+    display: none;
+  }
+
+
+  .main-content {
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
+  }
+
+  .content-box {
+    width: 80%;
+    margin: 10px;
+  }
+
+  .gif {
+    max-width: 100%;
+    margin-right: 300px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr); /* Display one column on smaller screens */
+  }
+  h1 {
+    font-size: 300% !important; /* Adjust font size of h1 for smaller screens */
+  }
+  .project-box {
+    width: 87%; /* Adjust width of project box for smaller screens */
+   /* Adjust margin for smaller screens */
+  }
+  .achievements-grid {
+    grid-template-columns: repeat(1, 1fr); /* Display one column on smaller screens */
+  }
+  .achievement-box{
+    width: 87%;
+  }
+
+  .about-gif {
+    max-width: 100%; /* Make about me GIF responsive */
+    margin-top: -20px; /* Add some top margin to separate it from the content */
+    margin-left: 0; /* Remove left margin on smaller screens */
+    margin-right: 0; /* Remove right margin on smaller screens */
+    display: block; /* Ensure the GIF is displayed as a block element */
+  }
+  
+  .about-page h1 {
+    font-size: 28px !important; /* Adjust font size of about page h1 for smaller screens */
+  }
+
+  .about-box {
+    width: 90%; /* Adjust width of about me box for smaller screens */
+    margin: 30px !important; /* Adjust margin for smaller screens */
+  }
+  
+}
+

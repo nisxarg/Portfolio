@@ -21,9 +21,7 @@ const Home = () => (
     
     {/* GIF */}
     <img src={gif} alt="Your GIF" className="gif" />
-    
   </div>
-  
 );
 
 // Define your Achievements, Resume, and About components here
