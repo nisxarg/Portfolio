@@ -309,3 +309,81 @@ body {
   
 }
 
+
+
+.man {
+  width: 50px;
+  height: 100px;
+  position: relative;
+}
+
+.head {
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.body {
+  width: 10px;
+  height: 40px;
+  background-color: #000;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arms {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arm {
+  width: 10px;
+  height: 30px;
+  background-color: #000;
+  position: absolute;
+}
+
+.arm:nth-child(1) {
+  transform: rotate(45deg);
+  top: -15px;
+  left: -15px;
+}
+
+.arm:nth-child(2) {
+  transform: rotate(-45deg);
+  top: -15px;
+  right: -15px;
+}
+
+.legs {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.leg {
+  width: 10px;
+  height: 30px;
+  background-color: #000;
+  position: absolute;
+}
+
+.leg:nth-child(1) {
+  top: 0;
+  left: -5px;
+}
+
+.leg:nth-child(2) {
+  top: 0;
+  right: -5px;
+}

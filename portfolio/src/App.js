@@ -1,51 +1,14 @@
+// App.js
+
 import React, { useState } from 'react';
-import './App.css'; // Import your CSS file for styling
-import logo from './logo.png'; // Import your logo file
-import gif from './gif.gif'; // Import your GIF file
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; // Import BrowserRouter, Routes, Route, Link
-import ProjectsPage from './ProjectsPage'; // Import ProjectsPage component
+import './App.css';
+import logo from './logo.png';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import ProjectsPage from './ProjectsPage';
 import AchievementsPage from './AchievementsPage';
-import ResumePage from './ResumePage'; // Import ResumePage component
+import ResumePage from './ResumePage';
 import AboutPage from './AboutPage';
-
-// Define your Home component here
-const Home = () => (
-  <div className="main-content">
-    {/* Box around text content */}
-    <div className="content-box">
-      <h1>Hello, I'm Nisarg Jadav</h1>
-      <p>
-        A passionate technologist with a flair for innovation. From developing futuristic communication systems for soldiers to crafting robots, I thrive on bringing cutting-edge ideas to life. Explore my journey through technology, robotics, and creative endeavors as I strive to make a meaningful impact in the world of innovation.
-      </p>
-    </div>
-    
-    {/* GIF */}
-    <img src={gif} alt="Your GIF" className="gif" />
-  </div>
-);
-
-// Define your Achievements, Resume, and About components here
-const Achievements = () => (
-  <div className="main-content">
-    <h1>Achievements</h1>
-    
-    {/* Add your achievements content here */}
-  </div>
-);
-
-const Resume = () => (
-  <div className="main-content">
-    <h1>Resume</h1>
-    {/* Add your resume content here */}
-  </div>
-);
-
-const About = () => (
-  <div className="main-content">
-    <h1>About</h1>
-    {/* Add your about content here */}
-  </div>
-);
+import HomePage from './HomePage'; // Import the HomePage component
 
 function App() {
   const [activeLink, setActiveLink] = useState("home");
@@ -61,7 +24,7 @@ function App() {
           {/* Logo */}
           <div className="logo">
             <Link to="/" className="logo-link">
-            <img src={logo} alt="Your Logo" />
+              <img src={logo} alt="Your Logo" />
             </Link>
           </div>
 
@@ -79,7 +42,7 @@ function App() {
 
         {/* Main Content */}
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<HomePage />} /> {/* Render HomePage instead of Home */}
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/achievements" element={<AchievementsPage />} />
           <Route path="/resume" element={<ResumePage />} />
@@ -88,7 +51,6 @@ function App() {
         
       </div>
     </Router>
-    
   );
 }
 
