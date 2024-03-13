@@ -12,9 +12,16 @@ import HomePage from './HomePage'; // Import the HomePage component
 
 function App() {
   const [activeLink, setActiveLink] = useState("home");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const handleLinkClick = (page) => {
     setActiveLink(page);
+    // Close the dropdown when a link is clicked
+    setDropdownOpen(false);
+  };
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
   };
 
   return (
@@ -38,6 +45,24 @@ function App() {
               <li><Link to="/about" className={activeLink === "about" ? "active" : ""} onClick={() => handleLinkClick("about")}>About</Link></li>
             </ul>
           </nav>
+
+          {/* Dropdown Button */}
+          <div className={`dropdown ${dropdownOpen ? 'open' : ''}`} onClick={toggleDropdown}>
+            <div className="menu-icon">
+              <div className="line"></div>
+              <div className="line"></div>
+              <div className="line"></div>
+            </div>
+            <div className="dropdown-content">
+              <ul>
+                <li><Link to="/" className={activeLink === "home" ? "active" : ""} onClick={() => handleLinkClick("home")}>Home</Link></li>
+                <li><Link to="/projects" className={activeLink === "projects" ? "active" : ""} onClick={() => handleLinkClick("projects")}>Projects</Link></li>
+                <li><Link to="/achievements" className={activeLink === "achievements" ? "active" : ""} onClick={() => handleLinkClick("achievements")}>Achievements</Link></li>
+                <li><Link to="/resume" className={activeLink === "resume" ? "active" : ""} onClick={() => handleLinkClick("resume")}>Resume</Link></li>
+                <li><Link to="/about" className={activeLink === "about" ? "active" : ""} onClick={() => handleLinkClick("about")}>About</Link></li>
+              </ul>
+            </div>
+          </div>
         </header>
 
         {/* Main Content */}
